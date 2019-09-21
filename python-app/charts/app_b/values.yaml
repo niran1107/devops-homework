@@ -1,0 +1,25 @@
+# Default values for python.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+nameOverride: auth-service
+
+replicaCount: 1
+image:
+  pullPolicy: Always
+  repository: docker.io/nirana
+  name: app-b
+  tag: "1.0"
+service:
+  name: app-b
+  type: ClusterIP
+  externalPort: 5001
+  internalPort: 5001
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+ingress:
+  enabled: false
