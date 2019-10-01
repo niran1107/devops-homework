@@ -3,7 +3,11 @@
 In order to access app-a application you will need to install ingress controller on the cluster. 
 I used nginx-ingress (https://github.com/helm/charts/tree/master/stable/nginx-ingress)
 
-## Auto-Scale
+## TLDR
+
+helm install python-app/
+
+## Auto-Scale 
 
 manifests/hpa.yaml
 
